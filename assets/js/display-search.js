@@ -2,7 +2,7 @@ var resultTextEl = document.querySelector('#result-text');
 var resultContentEl = document.querySelector('#result-content');
 var searchFormEl = document.querySelector('#search-form');
 var APIKey = "cdd7969a2462ddcc8bdb60c4c4b732b5";
-
+var listGroupUl = document.querySelector('#list-group');
 
 function getParams() {
   // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
@@ -14,6 +14,8 @@ function getParams() {
 
   searchApi(query, format);
 }
+
+listGroupUl.
 
 function printResults(resultObj) {
   console.log(resultObj);
@@ -82,7 +84,6 @@ function searchApi(query) {
 
   fetch(locQueryUrl)
     .then(function (response) {
-
     })
 
   if (format) {
@@ -124,10 +125,9 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
 
   var searchInputVal = document.querySelector('#search-input').value;
-  var formatInputVal = document.querySelector('#format-input').value;
 
   if (!searchInputVal) {
-    console.error('You need a search input value!');
+    console.error('Please enter a city!');
     return;
   }
 
