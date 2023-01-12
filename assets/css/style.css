@@ -1,10 +1,20 @@
 * {
-  border:1px solid black
+  border:1px solid plum
+}
+header {
+  background-color: blue;
+  color:whitesmoke;
+  text-align: center;
+  font-size:  x-large;
+  font-weight: 700;
+  font-family: 'Fira Sans', sans-serif;
 }
 body {
   font-family: 'Fira Sans', sans-serif;
 }
-
+#curWeather {
+  border: 1px solid black;
+}
 h1,
 h2,
 h3,
