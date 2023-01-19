@@ -54,7 +54,7 @@ function handleSearchFormSubmit() {
   // call next function (API fetch)
   loadDataLonLat(searchInputField.value);
   // fetchFiveDay();
-  fetchCurrentWeather();
+  
 }
 
 function loadDataLonLat(city) {
@@ -67,34 +67,60 @@ function loadDataLonLat(city) {
     if (response.ok) {
       return response.json().then(function (data) {
         console.log(data);
+        var storedLon = data[0].lon;
+        var storedLat = data[0].lat;
+        fetchCurrentWeather(storedLat, storedLon);
+        fetchFiveDay(storedLat, storedLon);
+       
         console.log(data[0].lon);
-        console.log(data[0].lat);
-        localStorage.setItem("lon", JSON.stringify(data[0].lon));
-        localStorage.setItem("lat", JSON.stringify(data[0].lat));c
-      })}})}
+        console.log(data[0].lat);})
+        
+        // localStorage.setItem("lon", JSON.stringify(data[0].lon));
+        // localStorage.setItem("lat", JSON.stringify(data[0].lat));
+      
+    }
+  })
+        
+}
 
-var storedLon = JSON.parse(localStorage.getItem("lon"));
-var storedLat = JSON.parse(localStorage.getItem("lat"));
 
-function fetchCurrentWeather(storedLon, storedLat) { //error 400 "wrong latitude"
-  var curWeatherAPIURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey;
+
+
+function fetchCurrentWeather(storedLat, storedLon) { 
+  console.log(storedLat);
+  console.log(storedLon);
+  var curWeatherAPIURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey + "&units=imperial";
   fetch(curWeatherAPIURL).then(function(response){
     if(response.ok) {
       return response.json().then(function(data){
-        console.log(data.main.temp)
+        console.log(data);
+        console.log(data.main.temp);
+        console.log(data.wind.speed);
+        console.log(data.main.humidity);
+        console.log(data.weather[0].icon);
+document.getElementById("curTemp").textContent = "Temperature (F): " + data.main.temp
+document.getElementById("curWind").textContent = "Wind Speed (mph): " + data.wind.speed
+document.getElementById("curHumidity").textContent = "% Humidity: " + data.main.humidity
+
+        let iconCode = data.weather[0].icon;
+        var currentWeatherIcon = document.getElementById("curIcon");
+        currentWeatherIcon.src = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
       })
     }
   })
 }
 
-function fetchFiveDay() {
-  var forecastAPIURL = "api.openweathermap.org/data/2.5/forecast?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey + "&units=imperial";
+function fetchFiveDay(storedLat, storedLon) {
+  var forecastAPIURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey + "&units=imperial";
     fetch(forecastAPIURL).then(function(response) {
       if (response.ok) {
         return response.json().then(function (data) {
-          console.log(data[0]);
-          console.log(data[0].name);
-})}})}
+          
+       
+        })
+      }
+    })
+  }
 
 
 
