@@ -70,7 +70,7 @@ function loadDataLonLat(city) {
         var storedLat = data[0].lat;
         fetchCurrentWeather(storedLat, storedLon);
         // fetchFiveDay(storedLat, storedLon);
-       
+       fetchFiveDay(storedLat, storedLon);
         console.log(data[0].lon);
         console.log(data[0].lat);})
         
@@ -92,7 +92,7 @@ function fetchCurrentWeather(storedLat, storedLon) {
   fetch(curWeatherAPIURL).then(function(response){
     if(response.ok) {
       return response.json().then(function(data){
-        console.log(data);
+        // console.log(data);
         // console.log(data.main.temp);
         // console.log(data.wind.speed);
         // console.log(data.main.humidity);
@@ -114,18 +114,21 @@ document.getElementById("curHumidity").textContent = "% Humidity: " + data.main.
 }
 
 function fetchFiveDay(storedLat, storedLon) {
-  var forecastAPIURL = "https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + storedLat + "&lon=" + storedLon + "&cnt=5&appid=" + APIKey + "&units=imperial";
-  
-  // "https://api.openweathermap.org/data/2.5/forecast?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey + "&units=imperial";
-    fetch(forecastAPIURL).then(function(response) {
-      if (response.ok) {
-        return response.json().then(function (data) {
-        // console.log(data);
+  var forecastAPIURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + storedLat + "&lon=" + storedLon + "&appid=" + APIKey + "&units=imperial";
+  fetch(forecastAPIURL).then(function(response){
+    if(response.ok) {
+      return response.json().then(function(data){
+        console.log(data);
+        console.log(data.list[0].dt_txt);
+        console.log(data.list[0].weather[0].icon);
+        console.log(data.list[0].main.temp);
+        console.log(data.list[0].wind.speed);
+        console.log(data.list[0].main.humidity);
         })
       }
     })
   }
-
+//if dt_txt is day 1 then
 
 
 //weather icon src = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png"
