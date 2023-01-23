@@ -124,6 +124,14 @@ function fetchFiveDay(storedLat, storedLon) {
         console.log(data.list[0].main.temp);
         console.log(data.list[0].wind.speed);
         console.log(data.list[0].main.humidity);
+      //  function fiveDays 
+//         document.getElementById("forecast-temp-1").textContent = "Temperature (F): " + data.list[0].main.temp;
+// document.getElementById("forecast-wind-1").textContent = "Wind Speed (mph): " + data.wind.speed;
+// document.getElementById("forecast-humidity-1").textContent = "% Humidity: " + data.main.humidity;
+
+//         let iconCode = data.weather[0].icon;
+//         var currentWeatherIcon = document.getElementById("imageForecast1");
+//         currentWeatherIcon.src = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
         })
       }
     })
