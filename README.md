@@ -7,6 +7,8 @@
 
   
   https://anitabanh.github.io/Weather-Dashboard/
+  ![image](https://user-images.githubusercontent.com/120350675/217075491-ef562fc4-5c17-4af2-9fa8-43c6316c89b5.png)
+
 
   ## Table of Contents 
 
