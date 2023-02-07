@@ -78,7 +78,7 @@ function handleSearchFormSubmit() {
 
 function loadDataLonLat(city) {
   var apiURL =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&limit=1&appid=" + APIKey;
   console.log(city);
@@ -124,7 +124,7 @@ document.getElementById("curHumidity").textContent = "% Humidity: " + data.main.
 
         let iconCode = data.weather[0].icon;
         var currentWeatherIcon = document.getElementById("curIcon");
-        currentWeatherIcon.src = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        currentWeatherIcon.src = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
 
         localStorage.setItem("searchedCityName", JSON.stringify(data.name));
 
