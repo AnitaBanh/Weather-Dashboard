@@ -1,22 +1,46 @@
 # Weather-Dashboard
 
+# Scheduler
+  ![](https://img.shields.io/badge/license-MIT-green)
+  ## Description
+  This application allows a user to search a city name for the weather conditions in that city. 
 
-<pre class="prism-code language-md css-pfbilm"><div class="token-line"><span class="token title important punctuation">#</span><span class="token title important"> <Your-Project-Title></span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> Description</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"> What was your motivation?</span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"> Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")</span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"> What problem does it solve?</span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"> What did you learn?</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> Table of Contents (Optional)</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">If your README is long, add a table of contents to make it easy for users to find what they need.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"></span><span class="token url">[</span><span class="token url content">Installation</span><span class="token url">](</span><span class="token url">#installation</span><span class="token url">)</span><span class="token plain"></span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"></span><span class="token url">[</span><span class="token url content">Usage</span><span class="token url">](</span><span class="token url">#usage</span><span class="token url">)</span><span class="token plain"></span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"></span><span class="token url">[</span><span class="token url content">Credits</span><span class="token url">](</span><span class="token url">#credits</span><span class="token url">)</span><span class="token plain"></span></div><div class="token-line"><span class="token plain"></span><span class="token list punctuation">-</span><span class="token plain"></span><span class="token url">[</span><span class="token url content">License</span><span class="token url">](</span><span class="token url">#license</span><span class="token url">)</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> Installation</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> Usage</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">Provide instructions and examples for use. Include screenshots as needed.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">To add a screenshot, create an </span><span class="token code keyword">`assets/images`</span><span class="token plain"> folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token code keyword">    ```md</span></div><div class="token-line"><span class="token code keyword">    ![alt text](assets/images/screenshot.png)</span></div><div class="token-line"><span class="token code keyword">    ```</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> Credits</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">List your collaborators, if any, with links to their GitHub profiles.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">If you followed tutorials, include links to those here as well.</span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain"></span><span class="token title important punctuation">##</span><span class="token title important"> License</span><span class="token plain"></span></div><div class="token-line"><span class="token plain">
-</span></div><div class="token-line"><span class="token plain">The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to </span><span class="token url">[</span><span class="token url content">https://choosealicense.com/</span><span class="token url">](</span><span class="token url">https://choosealicense.com/</span><span class="token url">)</span><span class="token plain">.</span></div></pre>
+  
+  https://anitabanh.github.io/Weather-Dashboard/
+  ![image](https://user-images.githubusercontent.com/120350675/217075491-ef562fc4-5c17-4af2-9fa8-43c6316c89b5.png)
+
+
+  ## Table of Contents 
+
+  - [Installation](##installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation
+  None        
+
+  ## Usage
+   Type a city in the search field and then click search. 
+  
+  ## License
+    MIT License
+    Copyright (c) 2023 Anita Banh
+    
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  ## Contributing
+  None
+
+  ## Tests
+  None
+
+  ## Questions
+  <https://github.com/AnitaBanh>
+  Please contact me with additional questions at anitabanhtx@gmail.com.
+  

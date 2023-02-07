@@ -15,19 +15,36 @@ searchBtn.addEventListener("click", function (event) {
 
 // Save city name and lat lon to local storage.
 var cities = [];
-
 function storeCityHistory(city) {
   if (JSON.parse(localStorage.getItem("cities")) != null) {
     cities = JSON.parse(localStorage.getItem("cities"));
+    cities.push(city);
   }
   cities.push(city);
   localStorage.setItem("cities", JSON.stringify(cities));
-  renderCities();
+  // renderCities();
   console.log(cities);
 }
 // function to append to array in local storage
 // rebuild list of past cities searched from local storage
 // function that reads local storage array and rebuilds history as button list. call this function after each new search.
+
+function rebuildHistory() {
+  var searchHistoryDiv = document.getElementById("search-history-container");
+  var storedSearches = JSON.parse(localStorage.getItem("cities"));
+  removeAllChildNodes(searchHistoryDiv);
+  for (let i = 0; i < storedSearches.length; i++) {
+    let newChild = document.createElement("button");
+    newChild.setAttribute("content", "test content");
+    newChild.setAttribute("class", "button is-fullwidth");
+    newChild.textContent = storedSearches[i].itemSearched;
+    searchHistoryDiv.appendChild(newChild);
+
+    newChild.addEventListener("click", function () {
+      console.log (newChild.innerHTML);
+    });
+      }
+    }
 // fetch weather conditions for current and future 5 days
 // function that passes coordinates to weather API and fetches 5 day conditions. returns API response
 // parse API response update html elements
@@ -50,8 +67,11 @@ function handleSearchFormSubmit() {
     return;
   }
   console.log(searchInputField.value);
+  storeCityHistory()
   // call next function (API fetch)
   loadDataLonLat(searchInputField.value);
+  storeCityHistory();
+  rebuildHistory();
   // fetchFiveDay();
   
 }
@@ -160,7 +180,7 @@ function fetchFiveDay(storedLat, storedLon) {
 // }
 // function rebuildHistory() {
 //   var searchHistoryDiv = document.getElementById("search-history-container");
-//   var storedSearches = JSON.parse(localStorage.getItem("previousSearch"));
+//   var storedSearches = JSON.parse(localStorage.getItem("cities"));
 //   removeAllChildNodes(searchHistoryDiv);
 //   for (let i = 0; i < storedSearches.length; i++) {
 //     let newChild = document.createElement("button");
@@ -171,6 +191,7 @@ function fetchFiveDay(storedLat, storedLon) {
 
 //     newChild.addEventListener("click", function () {
 //       console.log (newChild.innerHTML);
+          // loadDataLonLat(newChild.innerHTML);
 //       if ((newChild.innerHTML === "Bourbon")) {
 //         displayBourbonDrinks();
 //       } else if ((newChild.innerHTML === "Vodka")) {
